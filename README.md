@@ -15,3 +15,45 @@ To install the package, use Composer:
 
 ```sh
 composer require salekur/enum
+```
+
+## Usage
+To create a new enumeration, extend the **Enum** class and define constants for each enumerated value. Optionally, provide a **values** method to customize labels.
+
+```sh
+namespace Salekur\Enum\Enum;
+
+class UserRole extends Enum {
+    const ADMIN = 'admin';
+    const EDITOR = 'editor';
+    const VIEWER = 'viewer';
+
+    public static function values(): array {
+        return [
+            self::ADMIN => 'Administrator',
+            self::EDITOR => 'Content Editor',
+            self::VIEWER => 'Content Viewer'
+        ];
+    }
+}
+```
+
+## Retrieving Options
+The **Enum** class provides several methods to retrieve and interact with enumeration options. These methods allow you to access all enumeration options easily, specify option labels, check for the existence of an option, and extract keys and labels. Below are examples demonstrating how to use these methods with the UserRole enum.
+
+```sh
+$options = UserRole::options();
+// ['admin' => 'Administrator', 'editor' => 'Content Editor', 'viewer' => 'Content Viewer']
+
+$label = UserRole::get('admin');
+// 'Administrator'
+
+$exists = UserRole::has('editor');
+// true
+
+$keys = UserRole::keys();
+// ['admin', 'editor', 'viewer']
+
+$labels = UserRole::labels();
+// ['Administrator', 'Content Editor', 'Content Viewer']
+```
