@@ -1,0 +1,36 @@
+{
+    "name": "salekur/enum",
+    "description": "A powerful tool for creating and managing enumerations.",
+    "type": "library",
+    "license": "MIT",
+    "version": "1.0.0",
+    "keywords": [
+      "php",
+      "laravel",
+      "enum"
+    ],
+    "authors": [
+        {
+            "name": "Salekur Rahaman",
+            "email": "salekur9@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.4",
+        "illuminate/support": "^8.0|^9.0|^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Salekur\\Enum\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Salekur\\Enum\\Providers\\EnumServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
