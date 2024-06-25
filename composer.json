@@ -3,7 +3,7 @@
     "description": "A powerful tool for creating and managing enumerations.",
     "type": "library",
     "license": "MIT",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "keywords": [
       "php",
       "laravel",
