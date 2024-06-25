@@ -18,9 +18,9 @@ composer require salekur/enum
 ```
 
 ## Usage
-To create a new enumeration, extend the **Enum** class and define constants for each enumerated value. Optionally, provide a **values** method to customize labels.
+Extend the **Enum** class and define constants for each enumerated value to create a new enumeration. Optionally, provide a **values** method to customize labels.
 
-```sh
+```php
 namespace Salekur\Enum\Enum;
 
 class UserRole extends Enum {
@@ -41,7 +41,7 @@ class UserRole extends Enum {
 ## Retrieving Options
 The **Enum** class provides several methods to retrieve and interact with enumeration options. These methods allow you to access all enumeration options easily, specify option labels, check for the existence of an option, and extract keys and labels. Below are examples demonstrating how to use these methods with the UserRole enum.
 
-```sh
+```php
 $options = UserRole::options();
 // ['admin' => 'Administrator', 'editor' => 'Content Editor', 'viewer' => 'Content Viewer']
 
