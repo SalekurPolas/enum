@@ -28,6 +28,7 @@ class UserRole extends Enum {
     const EDITOR = 'editor';
     const VIEWER = 'viewer';
 
+    // optional values function
     public static function values(): array {
         return [
             self::ADMIN => 'Administrator',
